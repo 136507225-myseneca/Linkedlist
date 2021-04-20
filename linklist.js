@@ -14,6 +14,13 @@ class Linkedlsit {
       this.head = Newnode
     }
   }
+  prepend(value) {
+    const Newnode = { value: value, next: this.head }
+    this.head = Newnode
+    if (!this.tail) {
+      this.tail = Newnode
+    }
+  }
 
   toArray() {
     const content = []
@@ -31,4 +38,5 @@ List1.append(1)
 List1.append('a')
 List1.append(0.23)
 List1.append('New Car')
+List1.prepend('New Value')
 console.log(List1.toArray())
